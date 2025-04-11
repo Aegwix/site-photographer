@@ -1,5 +1,9 @@
-.topbar { 
+/* Reset global pour tous les éléments */
+
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Applique border-box à tous les éléments */
+    box-sizing: border-box;
 }
+
+
