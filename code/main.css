@@ -52,7 +52,7 @@ nav .topbar-links a:hover {
 }
 
 body {
-  background: linear-gradient(to left, #000000 0%, #000000 10%, #995f77 60%);
+  background: linear-gradient(to left, #3b3b3b 0%, #3b3b3b 0%, #995f77 100%);
   margin: 0;
   padding: 0;
 }
@@ -68,12 +68,32 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 80%;
+  height: 100%;
 }
 
 .side-image {
   height: 100%;
   object-fit: contain;
+}
+
+.text-block {
+  background-color: #d4cbcb;
+  border-radius: 1rem; /* bords arrondis */
+  padding: 2vh 2vw;
+  max-width: 60%;
+  margin: auto; /* Centrage horizontal automatique */
+  text-align: center;
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Centrage vertical dans la section left */
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrage vertical et horizontal */
+  height: 100%; /* Occupe toute la hauteur du viewport */
 }
 
 /*# sourceMappingURL=main.css.map */
