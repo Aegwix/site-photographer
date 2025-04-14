@@ -5,9 +5,9 @@
 body {
     background: linear-gradient(
         to left,
-        #000000 0%,         /* Noir plein à droite */
-        #000000 10%,        /* Noir maintenu jusqu'à 40% */
-        #995f77 60%        /* Dégradé direct vers le rose à partir de 40% */
+        #3b3b3b 0%,         /* Noir plein à droite */
+        #3b3b3b 0%,        /* Noir maintenu jusqu'à ... */
+        #995f77 100%        /* Dégradé direct vers le rose à partir de ... */
     );
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: 80%;
+    height: 100%;
 
 }
 
@@ -36,3 +36,24 @@ body {
     height: 100%;
     object-fit: contain;
 }
+
+.text-block {
+    background-color: #d4cbcb; 
+    border-radius: 1rem; /* bords arrondis */
+    padding: 2vh 2vw;
+    max-width: 60%;
+    margin: auto; /* Centrage horizontal automatique */
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+    /* Centrage vertical dans la section left */
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrage vertical et horizontal */
+    height: 100%; /* Occupe toute la hauteur du viewport */
+}
+      
+  
