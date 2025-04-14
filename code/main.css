@@ -51,4 +51,29 @@ nav .topbar-links a:hover {
   color: #d45c78;
 }
 
+body {
+  background: linear-gradient(to left, #000000 0%, #000000 10%, #995f77 60%);
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  height: 90vh;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 80%;
+}
+
+.side-image {
+  height: 100%;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=main.css.map */
