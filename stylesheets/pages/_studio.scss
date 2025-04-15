@@ -13,29 +13,78 @@ body {
 }
 
 .studio {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); // 2 colonnes égales
-    grid-template-rows: repeat(2, 1fr);    // 2 lignes égales
-    height: 90vh;
-    gap: 2vh;
-  
-    .square {
-      background-color: #ececec;
-      border-radius: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  height: 90vh;
+  gap: 1rem;
+  padding: 1rem;
+
+  .left-side {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #995f77;
+    border-radius: 1rem;
+    padding: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+    p {
       font-family: 'Lora', serif;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      text-align: center;
       color: #333;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, background-color 0.3s ease;
-  
-      &:hover {
-        background-color: #d45c78;
-        color: #fff;
-        transform: scale(1.05);
-      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      object-fit: cover;
     }
   }
+
+  .right-top {
+    background: #995f77;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .right-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  .right-bottom {
+    background: #ececec;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .right-bottom p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+  }
+}
+
+
   
