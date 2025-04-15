@@ -1,1 +1,41 @@
+body {
+    background: linear-gradient(
+      to left,
+      #3b3b3b 0%,
+      #3b3b3b 0%,
+      #995f77 100%
+    );
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+    color: #333;
+}
 
+.studio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 colonnes égales
+    grid-template-rows: repeat(2, 1fr);    // 2 lignes égales
+    height: 90vh;
+    gap: 2vh;
+  
+    .square {
+      background-color: #ececec;
+      border-radius: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lora', serif;
+      font-size: 1.2rem;
+      color: #333;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #d45c78;
+        color: #fff;
+        transform: scale(1.05);
+      }
+    }
+  }
+  
