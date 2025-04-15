@@ -1,152 +1,19 @@
-@charset "UTF-8";
-/* Reset global pour tous les éléments */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: The default namespace "a propos" is not a valid Sass identifier.
+ * 
+ * Recommendation: add an "as" clause to define an explicit namespace.
+ *    ,
+ * 25 | @use 'pages/a propos';
+ *    | ^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   stylesheets/main.scss 25:1  root stylesheet */
 
-.topbar {
-  background-color: #f8c8dc;
-  padding: 0;
-  height: 10vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center; /* Centre les liens horizontalement */
-  align-items: center; /* Centre verticalement */
-  position: relative; /* Nécessaire pour positionner le logo en absolu */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: The default namespace \"a propos\" is not a valid Sass identifier.\a\aRecommendation: add an \"as\" clause to define an explicit namespace.\a    \2577 \a 25 \2502  @use 'pages/a propos';\a    \2502  ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   stylesheets/main.scss 25:1  root stylesheet";
 }
-
-.topbar-logo {
-  position: absolute;
-  left: 2vw;
-  height: 100%; /* La taille de la topbar */
-  width: auto;
-  object-fit: contain;
-}
-
-nav .topbar-links {
-  list-style-type: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-nav .topbar-links li {
-  margin: 0 3vh;
-}
-
-nav .topbar-links a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav .topbar-links a:hover {
-  color: #d45c78;
-}
-
-body {
-  background: linear-gradient(to left, #3b3b3b 0%, #3b3b3b 0%, #995f77 100%);
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: "Lora", serif;
-  color: #333;
-}
-
-.home {
-  display: grid;
-  grid-template-columns: 3.5fr 1.5fr;
-  height: 90vh;
-  position: relative;
-}
-
-/* Section gauche */
-.left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  position: relative;
-}
-
-.left-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(70%);
-}
-
-.text-block {
-  background-color: #ffffff;
-  border-radius: 1.5rem;
-  padding: 2vh 3vw; /* Réduit un peu les paddings */
-  max-width: 60%; /* Réduit la largeur maximale pour rétrécir le bloc */
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  z-index: 1;
-  backdrop-filter: blur(10px);
-}
-.text-block h1 {
-  align-self: center;
-  text-align: center;
-  margin-bottom: 1.5vh; /* Réduit la marge inférieure */
-  font-size: 1.5rem; /* Ajuste la taille du titre */
-  color: #d45c78;
-  font-weight: bold;
-}
-.text-block p {
-  margin: 1.5vh 0;
-  font-size: 1rem; /* Ajuste la taille du texte */
-  line-height: 1.8;
-  color: #555;
-}
-.text-block a {
-  margin-top: 2vh; /* Réduit l'espacement au-dessus du bouton */
-  align-self: center;
-  background-color: #d45c78;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background 0.3s ease, transform 0.2s ease-in-out;
-}
-.text-block a:hover {
-  background-color: #b04b64;
-  transform: translateY(-5px);
-}
-
-/* Section droite */
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 100%;
-  padding: 2vh;
-}
-
-.side-image {
-  height: 100%;
-  object-fit: contain;
-  border-radius: 1rem;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-}
-
-/*# sourceMappingURL=main.css.map */
