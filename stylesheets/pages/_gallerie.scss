@@ -1,1 +1,117 @@
+body {
+    background: linear-gradient(to left, #3b3b3b 0%, #995f77 100%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+    color: #333;
+    overflow: hidden;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .gallery-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gallery-view {
+    position: relative;
+    width: 80%;
+    padding: 2vh 0; // ajoute un espace en haut et en bas
+    box-sizing: border-box;
+  
+    .image {
+      width: 90%;
+      height: auto;
+      max-height: 90vh; // légèrement réduit pour tenir compte du padding
+      object-fit: contain;
+      border-radius: 1rem;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.5s ease;
+    }
+  }
+  
+  
+  // Affichage conditionnel des images colonne gauche
+  #left1:checked ~ .gallery-view .left-image1,
+  #left2:checked ~ .gallery-view .left-image2,
+  #left3:checked ~ .gallery-view .left-image3,
+  #left4:checked ~ .gallery-view .left-image4,
+  #left5:checked ~ .gallery-view .left-image5 {
+    opacity: 1;
+    position: relative;
+  }
+  
+  // Affichage conditionnel des images colonne droite
+  #right1:checked ~ .gallery-view .right-image1,
+  #right2:checked ~ .gallery-view .right-image2,
+  #right3:checked ~ .gallery-view .right-image3,
+  #right4:checked ~ .gallery-view .right-image4,
+  #right5:checked ~ .gallery-view .right-image5 {
+    opacity: 1;
+    position: relative;
+  }
+  
+  .gallery-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    .dot {
+      width: 0.8em;
+      height: 0.8em;
+      background: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      margin-left: 0.7em; /* décale un peu à droite */
+    }
+  
+    .dot:hover {
+      transform: scale(1.2);
+    }
+  
+    .dot:hover {
+      transform: scale(1.2);
+    }
+  }
+  
+  
+  
+  // Masquer les inputs radio
+  input[type="radio"] {
+    display: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
