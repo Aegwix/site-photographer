@@ -30,8 +30,9 @@ body {
   .gallery-view {
     position: relative;
     width: 80%;
-    padding: 2vh 0; // ajoute un espace en haut et en bas
+    padding: 2vh; // ajoute un espace en haut et en bas
     box-sizing: border-box;
+    padding-bottom: 6vh;
   
     .image {
       width: 90%;
